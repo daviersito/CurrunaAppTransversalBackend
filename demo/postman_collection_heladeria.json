@@ -1,0 +1,131 @@
+{
+  "info": {
+    "name": "Corruna - Heladeria",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "version": "1.0"
+  },
+  "item": [
+    {
+      "name": "Create Admin",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Admin Heladeria\",\n  \"email\": \"admin@heladeria.local\",\n  \"contra\": \"AdminPass!2025\",\n  \"estado\": true,\n  \"fecha_creacion\": 20251124,\n  \"rol\": { \"id\": 1 }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/usuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Cliente",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Cliente Demo\",\n  \"email\": \"cliente@heladeria.local\",\n  \"contra\": \"Cliente123!\",\n  \"estado\": true,\n  \"fecha_creacion\": 20251124,\n  \"rol\": { \"id\": 2 }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/usuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@heladeria.local\",\n  \"contra\": \"AdminPass!2025\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8081/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/usuarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      }
+    }
+  ]
+}
